@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title></title>
+     <meta charset="utf-8"/>
+     <link rel="stylesheet" href="../Public/css/bootstrap.css">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../Public/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style type="text/css">
+    body{
+        background:url('../Public/images/light_honey.png');
+    }
+    </style>
+</head>
+<body>
+<div>
+	<table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>用户名</th>
+                    <th>电话</th>
+                    <th>衣服信息</th>
+                    <th>尺码</th>
+                    <th>颜色</th>
+                    <th>价格</th>
+                    <th>租赁时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <volist name="list" id="vo">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.real_name}</td>
+                        <td>{$vo.phone}</td>
+                        <td>{$vo.type}</td>
+                        <td>{$vo.casize}</td>
+                        <td>{$vo.color}</td>
+                        <td>{$vo.price}</td>
+                        <td>{$vo.from|date="Y:m:d",###}到{$vo.end|date="Y:m:d",###}</td>
+                    </tr>
+                </volist>
+            </tbody>
+        </table>
+        {$page}
+</div>
+</body>
+</html>

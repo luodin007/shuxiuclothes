@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title></title>
+     <meta charset="utf-8"/>
+     <link rel="stylesheet" href="../css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../css/item-up.css">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+            var form1=document.getElementById('select-cata1');
+            var odiv1=document.getElementById('display-control1');
+            var odiv2=document.getElementById('display-control2');
+            var aInput=form1.getElementsByTagName('input');
+            if (form1.something[0].checked) {
+                odiv1.style.display='block';
+                odiv2.style.display='none';
+            }
+            else
+            {
+                odiv2.style.display='block';
+                odiv1.style.display='none';
+            }
+            for(var i=0 ;i<2 ;i++)
+            {
+                aInput[i].onclick=function(){
+                if (form1.something[0].checked) {
+                odiv1.style.display='block';
+                odiv2.style.display='none';
+                }
+                else
+                {
+                    odiv2.style.display='block';
+                    odiv1.style.display='none';
+                }
+                }
+            }
+    }
+    </script>
+    <style type="text/css">
+    body{
+        background:url('../images/light_honey.png');
+    }
+    </style>
+</head>
+<body>
+<div class="position">
+	<div class="positive-clothes">
+		<div style="font-size:24px;font-weight:bold;color:#fff;">商品发布</div>
+		<div class="form-group">
+    		<label for="FirstInputFile">主页展示图</label>
+    		<input type="file" id="FirstInputFile">
+ 		</div>
+ 		<div class="form-group">
+    		<label>信息介绍</label>
+    		<textarea cols="30" rows="5"></textarea>
+ 		</div>
+ 		<div class="form-group">
+    		<label>价格（元/每天）</label>
+    		<input type="text" />
+ 		</div>
+ 		<div class="form-group">
+ 			<label for="SecondInputFile">具体页面图片展示1</label>
+ 			<input type="file" id="SecondInputFile">
+ 		</div>
+ 		<div class="form-group">
+ 			<label for="ThirdInputFile">具体页面图片展示2</label>
+ 			<input type="file" id="ThirdInputFile">
+ 		</div>
+ 		<form>
+            男性：
+            <input type="radio" checked="checked" name="Sex" value="male" />
+            女性：
+            <input type="radio" name="Sex" value="female" />
+        </form>
+        <form id="select-cata1">
+            正装:
+            <input type="radio" checked="checked" name="something" value="clothes" id="getRadio" />
+            配件:
+            <input type="radio" name="something" value="other" id="getRadio" />
+        </form>
+        <div id="display-control1">
+            <form>
+                蓝色：
+                <input type="radio" checked="checked" name="color" value="blue" />
+                黑色：
+                <input type="radio" name="color" value="black" />
+            </form>
+            <form>
+                160
+                <input type="checkbox" name="160">
+                165
+                <input type="checkbox" name="165">
+                170
+                <input type="checkbox" name="170">
+                175
+                <input type="checkbox" name="175">
+                180
+                <input type="checkbox" name="180">
+            </form>
+        </div>
+        <div id="display-control2">
+            <form>
+                鞋：
+                <input type="radio" name="cata">
+                衬衫：
+                <input type="radio" name="cata">
+                领带：
+                <input type="radio" name="cata">
+            </form>
+        </div>
+        <div>
+            <button class="ibutton">确认发布</button>
+        </div>
+
+	</div>
+</div>
+</body>
+</html>

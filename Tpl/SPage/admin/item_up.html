@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title></title>
+     <meta charset="utf-8"/>
+     <link rel="stylesheet" href="../Public/css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../Public/css/item-up.css">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../Public/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+            var odiv1=document.getElementById('display-control1');
+            var odiv2=document.getElementById('display-control2');
+            var aInput=document.getElementsByName('type');
+            if (aInput[0].checked) {
+                odiv1.style.display='block';
+                odiv2.style.display='none';
+            }
+            else
+            {
+                odiv2.style.display='block';
+                odiv1.style.display='none';
+            }
+            for(var i=0 ;i<2 ;i++)
+            {
+                aInput[i].onclick=function(){
+                if (aInput[0].checked) {
+                odiv1.style.display='block';
+                odiv2.style.display='none';
+                }
+                else
+                {
+                    odiv2.style.display='block';
+                    odiv1.style.display='none';
+                }
+                }
+            }
+    }
+    </script>
+    <style type="text/css">
+    body{
+        background:url('../Public/images/light_honey.png');
+    }
+    </style>
+</head>
+<body>
+<div class="position">
+    <form method="post" action="{:U("CA/add")}" enctype="multipart/form-data">
+	<div class="positive-clothes">
+		<div style="font-size:24px;font-weight:bold;color:#fff;">商品发布</div>
+		<div class="form-group">
+    		<label for="FirstInputFile">主页展示图</label>
+    		<input type="file" name="img[]" id="FirstInputFile">
+ 		</div>
+        <div class="form-group">
+            <label>编号</label>
+            <input type="text" name="serial" value="{$item.serial}"/>
+        </div>
+        <div class="form-group">
+            <label>数量</label>
+            <input type="text" name="total" value="{$item.total}"/>
+        </div>
+ 		<div class="form-group">
+    		<label>信息介绍</label>
+    		<textarea cols="30" name="description" rows="5">{$item.description}</textarea>
+ 		</div>
+ 		<div class="form-group">
+    		<label>价格（元/每天）</label>
+    		<input type="text" name="price" value="{$item.price}"/>
+ 		</div>
+ 		<div class="form-group">
+ 			<label for="SecondInputFile">具体页面图片展示1</label>
+ 			<input type="file" name="img[]" id="SecondInputFile">
+ 		</div>
+ 		<div class="form-group">
+ 			<label for="ThirdInputFile">具体页面图片展示2</label>
+ 			<input type="file" name="img[]" id="ThirdInputFile">
+ 		</div>
+ 		<?php
+            if($edit)
+                echo "<h4 style='color:red'>请重新编辑以下信息，或点击返回键取消编辑</h4>";
+        ?>
+            男性：
+            <input type="radio" checked="checked" name="gender" value="0" />
+            女性：
+            <input type="radio" name="gender" value="1" /></br>
+        <div id="select-cata1">
+            正装:
+            <input type="radio" checked="checked" name="type" value="0" id="getRadio" />
+            配件:
+            <input type="radio" name="type" value="1" id="getRadio" />
+        </div>
+        <div id="display-control1">
+        	<div>
+                蓝色：
+                <input type="radio" checked="checked" name="color[]" value="blue" />
+                黑色：
+                <input type="radio" name="color[]" value="black" />
+            </div>
+            <div>
+                160
+                <input type="checkbox" name="size[]" value="160">
+                165
+                <input type="checkbox" name="size[]" value="165">
+                170
+                <input type="checkbox" name="size[]" value="170">
+                175
+                <input type="checkbox" name="size[]" value="175">
+                180
+                <input type="checkbox" name="size[]" value="180">
+            </div>
+        </div>
+        <div id="display-control2">
+            
+                鞋：
+                <input type="radio" value="1" name="accessory_type">
+                衬衫：
+                <input type="radio" value="4" name="accessory_type">
+                领带：
+                <input type="radio" value="2" name="accessory_type">
+             
+        </div>
+        <div id="display-control-shoe">
+            <div>
+                34
+                <input type="checkbox" name=size[]>  
+                35  
+                <input type="checkbox" name=size[]>  
+                36
+                <input type="checkbox" name=size[]>     
+                37
+                <input type="checkbox" name=size[]>    
+                38
+                <input type="checkbox" name=size[]>  
+                39 
+                <input type="checkbox" name=size[]> 
+                40
+                <input type="checkbox" name=size[]>  
+                41  
+                <input type="checkbox" name=size[]>              
+                42 
+                <input type="checkbox" name=size[]>              
+                43
+                <input type="checkbox" name=size[]>  
+            </div>
+            <div>
+                黑色：
+                <input type="checkbox" name=color[]>
+            </div>
+        </div>
+        <div id="display-control-shirt">
+            <div>
+                花色：
+                <input type="checkbox" name=color[]>
+                白色：
+                <input type="checkbox" name=color[]>
+            </div>
+        </div>
+        <div id="display-control-tie">
+            红：
+            <input type="checkbox" name=color[]>
+            粉：
+            <input type="checkbox" name=color[]>
+            深蓝：
+            <input type="checkbox" name=color[]>
+            花色：
+            <input type="checkbox" name=color[]>
+        </div>   
+        <div>
+            <button class="ibutton">确认发布</button>
+            <?php if($edit){ ?>
+                <input type="button" class="ibutton" onclick="location.href='{:U("Admin/positive_manage")}'" value="返回"></input>
+            <?php } ?>
+        </div>
+
+	</div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body{
+	background:url('../images/mybg.jpg');
+}
+.content{
+	margin: auto;
+	padding: 20px 20px 20px 20px;
+	width: 800px;
+	background-color: #fff;
+	margin-top: 70px;
+	min-height: 500px;
+	border-radius: 8px;
+}
+
+.zzx_list_style {
+padding: 0 10px;
+font-size: 14px;
+}
+.zzx_form_c a{
+	color: #999;
+}
+a.zzx_title{
+	color: black; 
+}
+.zzx_time {
+	color: #999999;
+	float: right;
+	background: #fff;
+}
+.info-list ul li{
+	list-style: none;
+	margin-bottom: 10px;
+}

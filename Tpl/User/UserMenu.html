@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title></title>
+     <meta charset="utf-8"/>
+     <link rel="stylesheet" href="../Public/css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../Public/css/header.css">
+     <link rel="stylesheet" type="text/css" href="../Public/css/userMenu.css">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../Public/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+    	var myinfo=document.getElementById("myinfoM");
+    	var mylist=document.getElementById("mylistM");
+    	var oD1=document.getElementById("myinfo");
+    	var oD2=document.getElementById("mylist");
+
+    	myinfo.onclick=function(){
+            oD1.style.display='block';
+            oD2.style.display='none';
+        }
+        mylist.onclick=function(){
+            oD1.style.display='none';
+            oD2.style.display='block';
+        }
+    }
+    </script>
+</head>
+<body>
+<include file="Public:header"/>
+<div class="content">
+	<div class="panel-group width-control" id="accordion">
+  		<div class="panel panel-default">
+    		<div class="panel-heading">
+      		<h4 class="panel-title">
+        	<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          用户管理
+        	</a>
+      		</h4>
+    		</div>
+    	<div id="collapseOne" class="panel-collapse collapse in">
+      		<div class="panel-body" id="panel-body">
+        		<ul>
+        			<li>
+        				<a href="javascript:;" id="myinfoM">个人信息管理</a>
+        			</li>
+        			<li>
+        				<a href="javascript:;"id="mylistM">历史订单</a>
+        			</li>
+        		</ul>
+      		</div>
+    	</div>
+  	</div>
+  	</div>
+  	<div class="main-content zzx-hide" id="myinfo">
+  		<div class="tab-pane" id="other">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>邮箱</th>
+                <th>操作</th>
+              </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{$_SESSION['user']['real_name']}</td>
+            <td>{$_SESSION['user']['phone']}</td>
+            <td>{$_SESSION['user']['email']}</td>
+           	<td><a href="#">修改密码</a></td>
+          </tr>
+        </tbody>
+    </table>
+ </div>
+  	</div>
+  	<div class="main-content" id="mylist">
+  		<div class="tab-pane" id="other">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>订单编号</th>
+                <th>订单信息</th>
+                <th>尺寸</th>
+                <th>颜色</th>
+                <th>价格</th>
+              </tr>
+        </thead>
+        <tbody>
+          <volist name="list" id="vo">
+              <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo["ca"]['description']}</td>
+                <td>{$vo.casize}cm</td>
+                <td>{$vo["color"]["color"]}</td>
+                <td>{$vo.price}</td>
+              </tr>
+          </volist>
+        </tbody>
+    </table>
+ </div>
+  	</div>
+</div> 
+</body>
+</html>

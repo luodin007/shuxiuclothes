@@ -1,0 +1,28 @@
+.width-control{
+	width: 240px;
+	position: relative;
+	top: 80px;
+	left:40px;
+}
+.panel-body ul{
+	margin-right: 30px;
+	position: relative;
+	right: 10px;
+}
+.panel-body ul li{
+	list-style: none;
+	border-bottom: solid #ccc 1px;
+	margin-bottom: 10px;
+	padding-bottom: 4px;
+}
+.panel-body ul li a{
+	font-size: 16px;
+	color: #797474;
+	padding-left: 30px;
+}
+.panel-body ul li a:hover{
+	cursor: pointer;
+}
+body{
+	background: url('../images/wallpaper1.jpg');
+}

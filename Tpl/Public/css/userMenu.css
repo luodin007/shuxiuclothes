@@ -1,0 +1,37 @@
+.width-control{
+	width: 240px;
+	position: absolute;
+	top: 30%;
+}
+.panel-body ul{
+	margin-right: 30px;
+	position: relative;
+	right: 10px;
+}
+.panel-body ul li{
+	list-style: none;
+	border-bottom: solid #ccc 1px;
+	margin-bottom: 10px;
+	padding-bottom: 4px;
+}
+.panel-body ul li a{
+	font-size: 16px;
+	color: #797474;
+	padding-left: 30px;
+}
+.panel-body ul li a:hover{
+	cursor: pointer;
+}
+.content{
+	width: 1000px;
+	margin:auto; 
+}
+.main-content{
+	width: 600px;
+	min-height: 200px;
+	border-radius: 8px;
+	background-color: #fff;
+	position: absolute;
+	top: 30%;
+	left: 35%;
+}

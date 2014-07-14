@@ -1,0 +1,104 @@
+/*author: frankxin.zhang*/
+
+#showbox{
+	width: 700px;
+	height: 240px;
+	background-color:#FFFFF0;
+	border-radius: 10px;
+	position: relative;
+	top: 150px;
+	margin:auto;
+	padding: 10px 10px;
+	margin-bottom: 30px;
+}
+#showbox-inner{
+	width: 100%;
+	height: 100%;
+	background:url("../images/mybg.jpg");
+	border: 1px solid #969696;
+	border-radius: 3px;
+}
+.details{
+	padding: 22px 0px 0px 15px;
+	text-shadow: 1px 1px 5px black;
+	width: 70%;
+}
+.details p{
+	padding: 0px 0px 15px; 
+}
+#showbox-inner a img{
+	float: left;
+	margin-right:10px;
+}
+#price{
+	float: right;
+}
+.check-more{
+	padding: 5px 20px;
+	border-radius: 5px;
+	float: right;
+	position: relative;
+	left: 300px;
+	top:30px;
+	background-color: #FFFFF0;
+	
+}
+#showbox-inner .more a{
+	font-size:20px;
+	line-height: 1.618;
+	color:#ccc;
+	text-decoration:none; 
+	border:1px solid #bbb;
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+#showbox-inner .more a:hover{
+	color: #ff8706;
+	border-color: #999;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+	font-weight: bold;
+}
+#select-order ul li{
+	float: left;
+	padding:20px 40px 20px 30px;
+}
+#select-order ul{
+	list-style: none;
+}
+#select-order{
+	width: 100%;
+	height: 82px;
+}
+#some-choice-all{
+	position: absolute;
+	top: 100px;
+}
+.some-choice{
+	width:700px;
+	height:32px;
+	margin-bottom: 20px;
+}
+.choice-deco{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px 25px 5px 25px;
+	margin-left: 20px;
+	background-color:#FFFFF0;
+}
+#content{
+	width: 700px;
+	height:auto;
+	margin: auto; 
+  	position: absolute; 
+  	top: 200px; 
+  	left: 0; 
+  	bottom: 0;
+  	right: 0; 
+}
+#index{
+	position: relative;
+	top: 150px;
+	left:400px;
+}

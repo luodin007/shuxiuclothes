@@ -1,0 +1,6 @@
+[ 2014-05-03T10:27:52+08:00 ] 0.0.0.0 /shuxiuclothes/index.php/Order/page1.1.html
+ERR: 非法操作:page1.1
+
+[ 2014-05-03T10:28:01+08:00 ] 0.0.0.0 /shuxiuclothes/index.php/SPage/view/type/1/cat/3.html
+ERR: 模板不存在[E:/wamp/www/shuxiuclothes/Tpl/./Tpl/SPage/theme/default/content2.html.html]
+

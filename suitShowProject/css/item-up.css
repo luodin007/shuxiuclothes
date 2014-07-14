@@ -1,0 +1,19 @@
+.position{
+	margin-top: 50px;
+}
+.positive-clothes{
+	float:left;
+	width: 200px;
+	margin-left: 200px;
+}
+.other-thing{
+	float:right;
+	width: 200px;
+	margin-right: 200px;
+}
+.ibutton{
+	width: 90px;
+	height: 40px;
+	border-radius: 4px;
+
+}

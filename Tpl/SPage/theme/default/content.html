@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title></title>
+     <meta charset="utf-8"/>
+     <link rel="stylesheet" href="../Public/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../Public/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../Public/css/news.css">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../Public/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+<include file="Public:header"/>
+<div class="content">
+	<div class="zzx_content_title">
+                <h3>{$title}</h3>
+                <div class="zzx_info">
+                    {$inputtime|date="Y.m.d",###} | 
+                    <a href="#">蜀秀公司</a>
+                </div>
+            </div>
+            <div class="zzx_content_page">
+            	{$content}
+            </div>
+            <div class="zzx_next_page">
+                <span class="zzx_word_effect">上一篇：</span>
+                {$prev.link}</br>
+                <span class="zzx_word_effect">下一篇：</span>
+                {$next.link}
+            </div>
+</div>
+</body>
+</html>

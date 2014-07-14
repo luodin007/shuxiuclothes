@@ -1,0 +1,15 @@
+[ 2014-04-15T21:00:38+08:00 ] 0.0.0.0 /shuxiuclothes/index.php/Admin/login.php
+ERR: 非法操作:login.php
+
+[ 2014-04-15T21:08:41+08:00 ] 0.0.0.0 /shuxiuclothes/index.php/Order/page1.1.html
+ERR: 非法操作:page1.1
+
+[ 2014-04-15T21:11:13+08:00 ] 0.0.0.0 /shuxiuclothes/index.php/Order/page1.1.html
+ERR: 非法操作:page1.1
+
+[ 2014-04-15T21:20:53+08:00 ] 0.0.0.0 /shuxiuclothes/index.php/User/UserMenu.html
+ERR: 非法操作:UserMenu
+
+[ 2014-04-15T21:24:27+08:00 ] 0.0.0.0 /shuxiuclothes/index.php/User/UserMenu.html
+ERR: 非法操作:UserMenu
+

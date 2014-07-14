@@ -1,0 +1,19 @@
+.photo-display{
+	float: left;
+	position: relative;
+	top: 60px;
+	left:50px;
+	border-right: 1px dotted rgba(212, 202, 202, 0.97);
+	padding-right: 150px;
+}
+.login{
+	float: left;
+	position: relative;
+	top: 200px;
+	left: 300px;
+}
+.login-cata{
+	color: rgba(212, 202, 202, 0.97);
+	font-size: 20px;
+	font-weight: bold;
+}

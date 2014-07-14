@@ -1,0 +1,30 @@
+.content{
+	width: 800px;
+	min-height:500px; 
+	margin:auto;
+	background-color: #fff;
+	border-radius: 8px;
+	margin-top: 50px;
+	padding-top: 50px;
+}
+.zzx_content_title{
+	text-align: center;
+}
+.zzx_info{
+	font-color:#666;
+	font-size: 12px;
+	border-bottom: 1px dashed #999999;
+}
+.zzx_content_page{
+	margin: 60px 7px 60px 7px;
+	font-size: 14px;
+}
+.zzx_next_page{
+	border-top:1px dashed #999999;
+	border-bottom:1px dashed #999999;
+	font-size: 14px;
+}
+.zzx_word_effect{
+	font-weight: bold;
+	font-size: 14px;
+}

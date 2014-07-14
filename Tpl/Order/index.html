@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../Public/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../Public/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../Public/css/page1.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../Public/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style type="text/css">
+    body{
+    	background:url("../Public/images/mybg.jpg");
+    }
+    </style>
+    <script type="text/javascript">
+    window.onload=function(){
+        var oMancolor=document.getElementById("mancolor");
+        var oWomencolor=document.getElementById("womencolor");
+        oMancolor.style.display="none";
+        oWomencolor.style.display='none';
+
+        var odiv=document.getElementById('sex');
+        var alink=odiv.getElementsByTagName('a');
+        alink[0].onclick=function(){
+            oMancolor.style.display='block';
+            oWomencolor.style.display='none';
+        }
+        alink[1].onclick=function(){
+            oMancolor.style.display='none';
+            oWomencolor.style.display='block';
+        }
+
+    
+    }
+    </script>
+</head>
+<body>
+	<include file="Public:header"/>
+
+    <div id="content">
+    <!--选衣服流程-->
+  	<div id="select-order">
+    	<ul>
+    		<li><a href="#"><img src="../Public/images/select1.jpg"></a></li>
+    		<li><a href="page1.1.html"><img src="../Public/images/selected2.jpg"></a></li>
+    		<li><a href="#"><img src="../Public/images/select-disable3.jpg"></a></li>
+    	</ul>    		
+    </div>
+    <!--条件选择-->
+    <div id="some-choice-all">
+    	<div id="sex" class="some-choice" style="font-size:20px;line-height: 1.618; color:#ccc;">
+    	请选择性别：<a href="{:U('Order/index',array('gender'=>0))}"><span class="choice-deco">男</span></a><a href="{:U('Order/index',array('gender'=>1))}" ><span class="choice-deco">女</span></a>
+    	</div>
+    	<div id="mancolor" class="some-choice" style="font-size:20px;line-height: 1.618; color:#ccc; ">
+    	请选择颜色：<a href="#"><span class="choice-deco">蓝色</span></a><a href="#"><span class="choice-deco">黑色</span></a>
+    	</div>
+        <div id="womencolor" class="some-choice" style="font-size:20px;line-height: 1.618; color:#ccc; ">
+        请选择颜色：<a href="#"><span class="choice-deco">蓝色</span></a><a href="#"><span class="choice-deco">黑色</span></a><a href="#"><span class="choice-deco">白色</span></a><a href="#"><span class="choice-deco">褐色</span></a><a href="#"><span class="choice-deco">灰色</span></a>
+        </div>
+
+    </div>
+    <!--衣服展示-->
+    <volist name="list" id="vo">
+            <div id="showbox">
+                <div id="showbox-inner">
+                <a href="#"><img src="__PUBLIC__/upload{$vo['imgs']['imgurl']}" width="220px" height="220px" style="overflow:hidden;"></a>
+                <div class="details" style="font-size: 20px;line-height: 1.618; color:#ccc;">
+                 <p>{$vo.description}</p>
+                    <div id="price" style="font-size:25px;line-height: 1.618; color:#ccc">
+                        {$vo.price}RMB<span style="font-size:15px">/天</span>
+                    </div>
+                </div>
+                <div class="more">
+                    <a class="check-more" href="{:U("Order/detail",array("id"=>$vo['id']))}">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </volist>
+    <div id="index">
+    	<ul class="pagination pagination-lg">
+            {$page}
+  			<!--<li><a href="#">&laquo;</a></li>
+  			<li><a href="#" class="active">1</a></li>
+  			<li><a href="#">2</a></li>
+  			<li><a href="#">3</a></li>
+  			<li><a href="#">4</a></li>
+  			<li><a href="#">5</a></li>
+  			<li><a href="#">&raquo;</a></li>-->
+		</ul>
+    </div>
+    </div>
+<script type="text/javascript">
+    var oActive=document.getElementById("active");
+    var oUl=oActive.getElementsByTagName("ul");
+    var aLi=oUl[0].getElementsByTagName("li");
+
+    aLi[1].className+="zzx-active";
+</script>    
+</body>
+</html>

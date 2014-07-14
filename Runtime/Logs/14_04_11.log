@@ -1,0 +1,33 @@
+[ 2014-04-11T21:23:02+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/%7BU('CA/positive_manage',array('gender'=%3E1))%7D
+ERR: 非法操作:{U('CA
+
+[ 2014-04-11T21:23:26+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/%7BU('Admin/positive_manage',array('gender'=%3E1))%7D
+ERR: 非法操作:{U('Admin
+
+[ 2014-04-11T21:31:21+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/order_on.html
+ERR: 非法操作:order_on
+
+[ 2014-04-11T21:36:25+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/adminList.html
+ERR: 非法操作:adminList
+
+[ 2014-04-11T21:38:03+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/adminList.html
+ERR: 模板不存在[D:/xampp/htdocs/shuxiu/Tpl/Admin/adminList.html]
+
+[ 2014-04-11T22:35:49+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/adminAdd.html
+ERR: 非法操作:adminAdd
+
+[ 2014-04-11T22:35:50+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/adminAdd.html
+ERR: 非法操作:adminAdd
+
+[ 2014-04-11T23:04:45+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/
+ERR: 非法操作:index
+
+[ 2014-04-11T23:04:50+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/
+ERR: 非法操作:index
+
+[ 2014-04-11T23:04:55+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin/Index
+ERR: 非法操作:Index
+
+[ 2014-04-11T23:06:47+08:00 ] 0.0.0.0 /shuxiu/index.php/Admin
+ERR: 模板不存在[D:/xampp/htdocs/shuxiu/Tpl/D//xampp/htdocs/shuxiu/./Tpl/SPage/admin/index.html.html]
+

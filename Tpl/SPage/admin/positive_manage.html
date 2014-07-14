@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title></title>
+     <meta charset="utf-8"/>
+     <link rel="stylesheet" href="../Public/css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../Public/css/item-down.css">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../Public/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style type="text/css">
+    body{
+        background:url('../Public/images/light_honey.png');
+    }
+    </style>
+</head>
+<body>
+<div class="position">
+<ul class="nav nav-tabs">
+  <li><a href="{:U('Admin/positive_manage',array('gender'=>1))}">女正装</a></li>
+  <li><a href="{:U('Admin/positive_manage',array('gender'=>0))}">男正装</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  	<div class="tab-pane active" id="positive">
+  		<table class="table table-striped">
+  			<thead>
+  				<tr>
+  					<th>#</th>
+  					<th>编号</th>
+  					<th>描述</th>
+            <th>价格</th>
+  					<th>剩余套数</th>
+  					<th></th>
+            <th></th>
+  				</tr>
+  			</thead>
+  			<tbody>
+          <volist name="list" id="vo">
+            <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.serial}</td>
+            <td>{$vo.description}</td>
+            <td>{$vo.price}</td>
+            <td>{$vo['total']-$vo['sold']}套</td>
+            <td><a href="{:U("Admin/edit",array('id'=>$vo['id']))}">编辑</a></td>
+            <td><a href="{:U("CA/delete",array('id'=>$vo['id']))}">删除</a></td>
+          </tr>
+          </volist>
+  			</tbody> 
+		</table>
+  	</div>
+    
+</div>
+<div class="pagination-position">
+	<ul class="pagination">
+      {$page}
+	</ul>
+</div>
+</div>
+
+</body>
+</html>
